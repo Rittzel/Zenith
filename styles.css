@@ -123,3 +123,10 @@ footer {
         height: 420px;
     }
 }
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
