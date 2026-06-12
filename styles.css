@@ -161,3 +161,13 @@ footer {
     height: 100%;
     border: 0;
 }
+
+h1 {
+    text-align: center;
+    background-color: var(--bg-alt);
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
