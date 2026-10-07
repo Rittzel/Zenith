@@ -131,12 +131,42 @@ section {
 table.hiscores {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 table.hiscores th,
 table.hiscores td {
-    padding: 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid var(--accent);
+    vertical-align: middle;
+    text-align: left;
+}
+
+table.hiscores th:nth-child(1),
+table.hiscores td:nth-child(1) {
+    width: 12%;
+}
+
+table.hiscores th:nth-child(2),
+table.hiscores td:nth-child(2) {
+    width: 38%;
+}
+
+table.hiscores th:nth-child(3),
+table.hiscores td:nth-child(3) {
+    width: 22%;
+}
+
+table.hiscores th:nth-child(4),
+table.hiscores td:nth-child(4) {
+    width: 28%;
+}
+
+table.hiscores td img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 footer {
