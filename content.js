@@ -107,13 +107,6 @@ window.ZENITH = {
       twitch: "https://www.twitch.tv/xanderosrs",
       youtube: "https://www.youtube.com/@XanderOSRS",
     },
-    {
-      name: "Rittzel",
-      image: "creators/Rittzel.png",
-      description: "The unluckiest player ever.",
-      twitch: "https://www.twitch.tv/envenomedgaming",
-      youtube: "https://www.youtube.com/@envenomedgaming5520",
-    },
   ],
   gallery: [
     // Achievements
