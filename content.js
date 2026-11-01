@@ -108,13 +108,6 @@ window.ZENITH = {
       youtube: "https://www.youtube.com/@XanderOSRS",
     },
     {
-      name: "CCTV",
-      image: "gallery/Achievements/CCTV_Music_cape.png",
-      description: "The grindiest player ever.",
-      twitch: "https://www.twitch.tv/",
-      youtube: "https://www.youtube.com/",
-    },
-    {
       name: "Rittzel",
       image: "creators/Rittzel.png",
       description: "The unluckiest player ever.",
