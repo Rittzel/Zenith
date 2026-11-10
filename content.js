@@ -2,6 +2,11 @@ window.ZENITH = {
   invite: "https://discord.gg/8zNn5fgq6T",
   events: [
     {
+      title: "Yama",
+      image: "eventscreenshots/yama_event.webp",
+      description: "Yama, the master of pacts.",
+    },
+    {
       title: "Theatre of Blood",
       image: "eventscreenshots/Theatre_of_Blood.webp",
       description: "A trip to the Theatre of Blood.",
