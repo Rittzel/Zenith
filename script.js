@@ -6,6 +6,7 @@ const navigation = [
   ["Home", "index.html", "home"],
   ["Join", "join.html", "join"],
   ["Events", "events.html", "events"],
+  ["Other Games", "other-games.html", "other-games"],
   ["Hiscores", "hiscores.html", "hiscores"],
   ["Gallery", "gallery.html", "gallery"],
   ["Roles", "roles.html", "roles"],
@@ -53,6 +54,11 @@ const pageDetails = {
     "Made by the community",
     "Our content creators",
     "Get to know the players sharing their Zenith adventures with the world.",
+  ],
+  "other-games": [
+    "A little variety, too",
+    "Other games",
+    "Find the Zenith community in Minecraft for building, exploring, and new adventures beyond Gielinor.",
   ],
 };
 
@@ -265,6 +271,39 @@ function renderCreators() {
         </section></main>`;
 }
 
+function renderOtherGames() {
+  const serverAddress = data.minecraftServer.address.trim();
+  return `<main id="main-content">${pageHeading(...pageDetails["other-games"])}
+        <section class="section-wrap other-games-section">
+            <div class="game-grid">${data.otherGames
+              .map(
+                (game) => `
+                <article class="game-card">
+                    <img class="game-icon" src="${escapeHtml(game.image)}" alt="${escapeHtml(game.name)} logo" loading="lazy">
+                    <div class="game-content">
+                        <p class="eyebrow">${escapeHtml(game.tag)}</p>
+                        <h2>${escapeHtml(game.name)}</h2>
+                        <p>${escapeHtml(game.description)}</p>
+                        <button class="button button--primary server-info-button" type="button" data-open-server-info>View server info<span aria-hidden="true">↗</span></button>
+                    </div>
+                </article>`,
+              )
+              .join("")}</div>
+        </section>
+        <section class="cta-band cta-band--compact"><div class="cta-inner"><p class="eyebrow">Build something together</p><h2>Your next adventure is waiting.</h2>${externalLink("Join the Discord")}</div></section>
+        <dialog class="minecraft-dialog" id="minecraft-server-dialog" aria-labelledby="minecraft-server-title">
+            <button class="dialog-close" type="button" data-close-server-info aria-label="Close server information">×</button>
+            <p class="eyebrow">Zenith Minecraft</p>
+            <h2 id="minecraft-server-title">Server information</h2>
+            <p class="server-address-label">Server address</p>
+            <p class="server-address">${serverAddress ? escapeHtml(serverAddress) : "Server address coming soon."}</p>
+            ${data.minecraftServer.version ? `<p class="server-version">Version: ${escapeHtml(data.minecraftServer.version)}</p>` : ""}
+            <button class="button button--primary server-copy-button" type="button" data-copy-server-address${serverAddress ? "" : " disabled"}>Copy address</button>
+            <p class="server-copy-status" data-server-copy-status aria-live="polite"></p>
+        </dialog>
+    </main>`;
+}
+
 function renderRecruitment() {
   return `<main id="main-content">${pageHeading(...pageDetails.recruitment)}
         <section class="section-wrap recruitment-section"><div class="recruitment-card"><span class="recruitment-icon" aria-hidden="true">⌛</span><p class="eyebrow">Taking a short break</p><h2>This board is offline for now.</h2><p>Recruitment hiscores are temporarily disabled. For the latest clan information, please join us on Discord.</p>${externalLink("Visit the Discord")}</div></section></main>`;
@@ -273,6 +312,7 @@ function renderRecruitment() {
 const renderers = {
   home: renderHome,
   events: renderEvents,
+  "other-games": renderOtherGames,
   gallery: renderGallery,
   hiscores: renderHiscores,
   join: renderJoin,
@@ -365,5 +405,37 @@ if (page === "gallery") {
     .addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
+  });
+}
+
+if (page === "other-games") {
+  const dialog = document.querySelector("#minecraft-server-dialog");
+  const serverAddress = data.minecraftServer.address.trim();
+  const copyButton = dialog.querySelector("[data-copy-server-address]");
+  const copyStatus = dialog.querySelector("[data-server-copy-status]");
+
+  document
+    .querySelector("[data-open-server-info]")
+    .addEventListener("click", () => dialog.showModal());
+  dialog
+    .querySelector("[data-close-server-info]")
+    .addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  copyButton.addEventListener("click", () => {
+    if (!serverAddress) return;
+    if (!navigator.clipboard?.writeText) {
+      copyStatus.textContent = "Clipboard access is unavailable. Copy the address manually.";
+      return;
+    }
+    navigator.clipboard.writeText(serverAddress).then(
+      () => {
+        copyStatus.textContent = "Server address copied.";
+      },
+      () => {
+        copyStatus.textContent = "Could not copy the address. Copy it manually.";
+      },
+    );
   });
 }

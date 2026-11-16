@@ -113,6 +113,18 @@ window.ZENITH = {
       youtube: "https://www.youtube.com/@XanderOSRS",
     },
   ],
+  otherGames: [
+    {
+      name: "Minecraft",
+      tag: "minecraft community, this is PvP enabled.",
+      image: "minecraft/minecraft-logo.png",
+      description: "Big builds, survival stories, and a little bit of pure creative freedom.",
+    },
+  ],
+  minecraftServer: {
+    address: "135.148.172.240:22618",
+    version: "",
+  },
   gallery: [
     // Achievements
     {
