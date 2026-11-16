@@ -118,7 +118,7 @@ window.ZENITH = {
       name: "ZenithCraft | Minecraft",
       tag: "minecraft community, this is PvP enabled.",
       image: "minecraft/minecraft-logo.png",
-      description: "Mostly Vanilla, and a little bit of pure creative freedom. This server is PvP enabled.",
+      description: "Mostly Vanilla, and a little bit of pure creative freedom. This server is PvP enabled. Version is 26.3 Java Edition.",
     },
   ],
   minecraftServer: {
