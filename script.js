@@ -58,7 +58,7 @@ const pageDetails = {
   "other-games": [
     "A little variety, too",
     "Other games",
-    "Find the Zenith community in Minecraft for building, exploring, and new adventures beyond Gielinor.",
+    "Find the Zenith community in other games for new adventures beyond Gielinor.",
   ],
 };
 
