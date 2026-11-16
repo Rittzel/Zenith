@@ -115,10 +115,10 @@ window.ZENITH = {
   ],
   otherGames: [
     {
-      name: "Minecraft",
+      name: "ZenithCraft | Minecraft",
       tag: "minecraft community, this is PvP enabled.",
       image: "minecraft/minecraft-logo.png",
-      description: "Big builds, survival stories, and a little bit of pure creative freedom.",
+      description: "Mostly Vanilla, and a little bit of pure creative freedom. This server is PvP enabled.",
     },
   ],
   minecraftServer: {
