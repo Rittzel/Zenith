@@ -279,7 +279,7 @@ img {
 }
 
 .hero--home::before {
-    background-image: url("https://oldschool.runescape.wiki/images/thumb/The_Fractured_Archive_-_First_Look_%281%29.jpg/1000px-The_Fractured_Archive_-_First_Look_%281%29.jpg?7047e");
+    background-image: url("https://oldschool.runescape.wiki/images/thumb/Fighting_Great_Olm.png/800px-Fighting_Great_Olm.png?49cef&20180430185943");
     background-position: center 42%;
     background-size: cover;
     filter: saturate(0.64);

@@ -2,6 +2,11 @@ window.ZENITH = {
   invite: "https://discord.gg/8zNn5fgq6T",
   events: [
     {
+      title: "Chambers of Xeric",
+      image: "eventscreenshots/Fighting_Great_Olm.webp",
+      description: "The Great Olm, the guardian of the deep!",
+    },
+    {
       title: "Yama",
       image: "eventscreenshots/yama_event.webp",
       description: "Yama, the master of pacts.",
