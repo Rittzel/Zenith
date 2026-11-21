@@ -195,7 +195,7 @@ window.ZENITH = {
     // Loot
     {
       category: "Loot",
-      title: "Vardorvis",
+      title: "Vardorvis · Ultor vestige",
       caption: "1,036 kc · Vardorvis · Xander OSRS",
       image: "gallery/loot/Ultor_Vestige_XanderOSRS.png",
     },
