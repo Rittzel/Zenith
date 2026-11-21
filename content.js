@@ -2,7 +2,7 @@ window.ZENITH = {
   invite: "https://discord.gg/8zNn5fgq6T",
   events: [
     {
-      title: "Chambers of Xeric",
+      title: "Raid of the Month (November): Chambers of Xeric",
       image: "eventscreenshots/Fighting_Great_Olm.webp",
       description: "The Great Olm, the guardian of the deep!",
     },
@@ -12,12 +12,12 @@ window.ZENITH = {
       description: "Yama, the master of pacts.",
     },
     {
-      title: "Theatre of Blood",
+      title: "Raid of the Month (October): Theatre of Blood",
       image: "eventscreenshots/Theatre_of_Blood.webp",
       description: "A trip to the Theatre of Blood.",
     },
     {
-      title: "Tombs of Amascut",
+      title: "Raid of the Month (September): Tombs of Amascut",
       image: "eventscreenshots/ToA.webp",
       description: "A community run through Tombs of Amascut.",
     },
