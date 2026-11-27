@@ -280,6 +280,12 @@ window.ZENITH = {
     // Event winners
     {
       category: "Event winners",
+      title: "Boss of the Week · Yama",
+      caption: "lvl99milfz",
+      image: "gallery/events/lvl99milfz_Yama.png",
+    },
+    {
+      category: "Event winners",
       title: "Boss of the Week",
       caption: "Tombs of Amascut · Disq Quals",
       image: "gallery/events/disq_quals_ToAEventWin.png",
