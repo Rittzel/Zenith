@@ -287,7 +287,7 @@ window.ZENITH = {
     {
       category: "Event winners",
       title: "Tombs of Amascut · Disq Quals",
-      caption: "Raid of the Month",
+      caption: "Raid of the week",
       image: "gallery/events/disq_quals_ToAEventWin.png",
     },
     {
