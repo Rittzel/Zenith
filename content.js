@@ -127,7 +127,7 @@ window.ZENITH = {
     },
   ],
   minecraftServer: {
-    address: "135.148.172.240:22618",
+    address: "157.85.90.47:20709",
     version: "",
   },
   gallery: [
